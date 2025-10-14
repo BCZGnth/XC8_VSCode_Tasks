@@ -1,0 +1,167 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "dependsOn": [
+                "Make directory"
+            ],
+            "command": "C:\\Program Files\\Microchip\\xc8\\v3.10\\bin\\xc8-cc.exe",
+            "args": [
+                "-mcpu=18f47k42",
+                "-mdfp=\"C:\\Program Files\\Microchip\\PIC18F-K_DFP\\xc8\"",
+                "-std=c99",
+                "-mno-keep-startup",
+                "-Wa,-a=build/${fileBasenameNoExtension}/diagnostics/assembly_list_file.lst",
+                "-Wl,-Map=build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.map",
+                "-v",
+                "-mheap=2000", 
+                // "-Wno-#warnings",
+                "-I", "mcc_generated_files/system/",
+                "-I", "mcc_generated_files/i2c_host/",
+                "-I", "mcc_generated_files/uart/",
+                "-I", "mcc_generated_files/adc/",
+                "-I", "mcc_generated_files/peripheral/",
+                "-I", "ssd1309/src",
+                "-I", "ssd1309/example",
+                "-I", "ssd1309/interface",
+                "-I", "SSD1309_Driver/",
+                "-I", "SSD1309_Driver/base",
+                "-I", "SSD1309_Driver/GFX",
+                "-I", "SSD1309_Driver/quick frames",
+                "-I", "LoRa/",
+                "-I", "SoftSPI/",
+                "-I", "logger/",
+                "-I", "payloads/",
+                "-I", "payloads/decode",
+                "-I", "payloads/subcommands",
+                "-I", "payloads/encode",
+                "-I", "payloads/base",
+                "-I", "payloads/lora_display_interface",
+                "-I", "shared_rx_tx/",
+                "-I", "aes_lib/aes_lib",
+
+                "-o",
+                "build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.hex",
+                "-O0",
+                "${file}",
+                "mcc_generated_files/system/src/system.c",
+                "mcc_generated_files/system/src/pins.c",
+                "mcc_generated_files/system/src/interrupt.c",
+                "mcc_generated_files/system/src/config_bits.c",
+                "mcc_generated_files/system/src/clock.c",
+                "mcc_generated_files/i2c_host/src/i2c2.c",
+                "mcc_generated_files/uart/src/uart1.c",
+                "mcc_generated_files/peripheral/src/pmd.c",
+                "shared_rx_tx/lora_setup.c",
+
+                "logger/logger.c",
+
+                // SSD1309 includes
+                "SSD1309_Driver/base/ssd1309_commands.c",
+                "SSD1309_Driver/base/ssd1309_i2c.c",
+                "SSD1309_Driver/GFX/ssd1309_api.c",
+                "SSD1309_Driver/GFX/ssd1309_font.c",
+                "SSD1309_Driver/GFX/ssd1309_shapes.c",
+
+                // LORA includes
+                "SoftSPI/SoftSPI.c",
+                "LoRa/lora.c",
+                "LoRa/dummy_defines.c",
+                "aes_lib/aes_lib/aes_lib.c",
+
+                // Payload decoding
+                "payloads/lora_display_interface/lora_display_interface.c",
+                "payloads/lora_display_interface/interface_functions.c",
+                "payloads/subcommands/subcommands.c",
+                "payloads/subcommands/parsing.c",
+                "payloads/decode/payload_decode.c",
+                "payloads/base/payload_base.c"
+
+            ]
+        },
+        {
+            "label": "Program the PIC",
+            "type": "shell",
+            "dependsOn": [
+                "build"
+            ],
+            "command": "C:\\Program Files (x86)\\MELabs Programmer\\meProg.exe",
+            "args": [
+                "-dPIC18F47k42",
+                "-a",
+                "-e",
+                "-p",
+                "${workspaceRoot}/build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.hex",
+                // "-n",
+                "-v"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Make directory",
+            "type": "shell",
+            // "dependsOn": [
+            //     "Clear Build Folder"
+            // ],
+            "problemMatcher": [],
+            "command": "mkdir",
+            "args": [
+                "${workspaceFolder}\\build\\${fileBasenameNoExtension}"
+            ]
+        },
+        {
+            "label": "Clear Build Folder",
+            "type": "shell",
+            "problemMatcher": [],
+            "command": "rmdir",
+            "args": [
+                "/s", 
+                "/q",
+                "${workspaceFolder}\\build\\${fileBasenameNoExtension}"
+            ]
+        },
+        // {
+        //     "label": "Clear Build Folder",
+        //     "type": "shell",
+        //     "dependsOn": [
+        //         "Program the PIC",
+        //     ],
+        //     "problemMatcher": [],
+        //     "command": "move",
+        //     "args": [
+        //         "/Y", 
+        //         "${workspaceFolder}\\build\\ben\\main.hex",
+        //         "${workspaceFolder}\\build\\"
+        //     ]
+        // },
+        // {
+        //     "label": "Mak",
+        //     "type": "shell",
+        //     "dependsOn": [
+        //         "Clear Build Folder"
+        //     ],
+        //     "problemMatcher": [],
+        //     "command": "mkdir",
+        //     "args": [
+        //         "${workspaceFolder}\\build\\ben"
+        //     ]
+        // },
+        // {
+        //     "label": "Clear Build Folder",
+        //     "type": "shell",
+        //     "problemMatcher": [],
+        //     "command": "rmdir",
+        //     "args": [
+        //         "/s", 
+        //         "/q",
+        //         "${workspaceFolder}\\build\\ben"
+        //     ]
+        // },
+    ]
+}

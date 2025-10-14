@@ -1,0 +1,41 @@
+{
+    "files.associations": {
+        "logger.h": "c",
+        "stdarg.h": "c",
+        "system.h": "c",
+        "ssd1309_commands.h": "c",
+        "ssd1309_font.h": "c",
+        "interrupt.h": "c",
+        "xc.h": "c",
+        "lora.h": "c",
+        "stdbool.h": "c",
+        "builtins.h": "c",
+        "language_support.h": "c",
+        "xc8debug.h": "c",
+        "pic18.h": "c",
+        "pic.h": "c",
+        "uart1.h": "c",
+        "stdint.h": "c",
+        "aes_lib.h": "c",
+        "commands": "c",
+        "demo.h": "c",
+        "payload_encode.h": "c",
+        "string.h": "c",
+        "lora_display_interface.h": "c",
+        "softspi.h": "c",
+        "payload_decode.h": "c",
+        "payload_base.h": "c",
+        "interface_functions.h": "c",
+        "h2o_frames.h": "c"
+    },
+    "mplab.project.workspace.addNewSourceFiles": "Always",
+    "mplab.project.workspace.removeDeletedSourceFiles": "Always",
+    "C_Cpp.default.compilerPath": "",
+    "C_Cpp.files.exclude": {
+        "**/.vscode": true,
+        "**/.vs": true,
+        "**/build/**": true,
+        "**/font_reference/**": true,
+        "**/breadboard/**": true
+    }
+}
