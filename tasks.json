@@ -40,7 +40,7 @@
                 "-I", "payloads/base",
                 "-I", "payloads/lora_display_interface",
                 "-I", "shared_rx_tx/",
-                "-I", "aes_lib/aes_lib",
+                "-I", "aes_lib",
 
                 "-o",
                 "build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.hex",
@@ -57,6 +57,7 @@
                 "shared_rx_tx/lora_setup.c",
 
                 "logger/logger.c",
+                "shared_rx_tx/misc.c",
 
                 // SSD1309 includes
                 "SSD1309_Driver/base/ssd1309_commands.c",
@@ -69,7 +70,7 @@
                 "SoftSPI/SoftSPI.c",
                 "LoRa/lora.c",
                 "LoRa/dummy_defines.c",
-                "aes_lib/aes_lib/aes_lib.c",
+                "aes_lib/aes.c",
 
                 // Payload decoding
                 "payloads/lora_display_interface/lora_display_interface.c",

@@ -26,7 +26,10 @@
         "payload_decode.h": "c",
         "payload_base.h": "c",
         "interface_functions.h": "c",
-        "h2o_frames.h": "c"
+        "h2o_frames.h": "c",
+        "aes.h": "c",
+        "lora_setup.h": "c",
+        "aes_key.h": "c"
     },
     "mplab.project.workspace.addNewSourceFiles": "Always",
     "mplab.project.workspace.removeDeletedSourceFiles": "Always",
