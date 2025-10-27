@@ -29,7 +29,7 @@
                 "-I", "SSD1309_Driver/",
                 "-I", "SSD1309_Driver/base",
                 "-I", "SSD1309_Driver/GFX",
-                "-I", "SSD1309_Driver/quick frames",
+                "-I", "SSD1309_Driver/quick_frames",
                 "-I", "LoRa/",
                 "-I", "SoftSPI/",
                 "-I", "logger/",
@@ -65,6 +65,7 @@
                 "SSD1309_Driver/GFX/ssd1309_api.c",
                 "SSD1309_Driver/GFX/ssd1309_font.c",
                 "SSD1309_Driver/GFX/ssd1309_shapes.c",
+                "SSD1309_Driver/quick_frames/h2o_frames.c",
 
                 // LORA includes
                 "SoftSPI/SoftSPI.c",
