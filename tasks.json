@@ -79,8 +79,15 @@
                 "payloads/subcommands/subcommands.c",
                 "payloads/subcommands/parsing.c",
                 "payloads/decode/payload_decode.c",
-                "payloads/base/payload_base.c"
+                "payloads/base/payload_base.c",
 
+                "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
+                "build/${fileBasenameNoExtension}_output.txt"
+
+                // Send output to log file
+                // "1>",
+                // "${fileBasenameNoExtension}_output.txt",
+                // "2>&1"
             ]
         },
         {
@@ -108,9 +115,9 @@
         {
             "label": "Make directory",
             "type": "shell",
-            // "dependsOn": [
-            //     "Clear Build Folder"
-            // ],
+            "dependsOn": [
+                "Clear Build Folder"
+            ],
             "problemMatcher": [],
             "command": "mkdir",
             "args": [
