@@ -44,7 +44,7 @@
 
                 "-o",
                 "build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.hex",
-                "-O0",
+                "-O3",
                 "${file}",
                 "mcc_generated_files/system/src/system.c",
                 "mcc_generated_files/system/src/pins.c",
