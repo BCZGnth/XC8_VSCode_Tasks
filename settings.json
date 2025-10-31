@@ -29,7 +29,8 @@
         "h2o_frames.h": "c",
         "aes.h": "c",
         "lora_setup.h": "c",
-        "aes_key.h": "c"
+        "aes_key.h": "c",
+        "ssd1309.h": "c"
     },
     "mplab.project.workspace.addNewSourceFiles": "Always",
     "mplab.project.workspace.removeDeletedSourceFiles": "Always",

@@ -44,7 +44,7 @@
 
                 "-o",
                 "build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.hex",
-                "-O3",
+                "-O0",
                 "${file}",
                 "mcc_generated_files/system/src/system.c",
                 "mcc_generated_files/system/src/pins.c",
@@ -54,10 +54,10 @@
                 "mcc_generated_files/i2c_host/src/i2c2.c",
                 "mcc_generated_files/uart/src/uart1.c",
                 "mcc_generated_files/peripheral/src/pmd.c",
-                "shared_rx_tx/lora_setup.c",
-
+                
                 "logger/logger.c",
                 "shared_rx_tx/misc.c",
+                "shared_rx_tx/lora_setup.c",
 
                 // SSD1309 includes
                 "SSD1309_Driver/base/ssd1309_commands.c",
@@ -79,6 +79,7 @@
                 "payloads/subcommands/subcommands.c",
                 "payloads/subcommands/parsing.c",
                 "payloads/decode/payload_decode.c",
+                // "payloads/encode/payload_encode.c",
                 "payloads/base/payload_base.c",
 
                 "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
