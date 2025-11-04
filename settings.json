@@ -25,12 +25,16 @@
         "softspi.h": "c",
         "payload_decode.h": "c",
         "payload_base.h": "c",
-        "interface_functions.h": "c",
+        "decode_functions.h": "c",
         "h2o_frames.h": "c",
         "aes.h": "c",
         "lora_setup.h": "c",
         "aes_key.h": "c",
-        "ssd1309.h": "c"
+        "ssd1309.h": "c",
+        "encode_functions.h": "c",
+        "decode_functions.h": "c",
+        "stdio.h": "c",
+        "f_map.h": "c"
     },
     "mplab.project.workspace.addNewSourceFiles": "Always",
     "mplab.project.workspace.removeDeletedSourceFiles": "Always",

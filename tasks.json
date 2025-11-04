@@ -39,6 +39,7 @@
                 "-I", "payloads/encode",
                 "-I", "payloads/base",
                 "-I", "payloads/lora_display_interface",
+                "-I", "payloads/function_maps",
                 "-I", "shared_rx_tx/",
                 "-I", "aes_lib",
 
@@ -75,11 +76,13 @@
 
                 // Payload decoding
                 "payloads/lora_display_interface/lora_display_interface.c",
-                "payloads/lora_display_interface/interface_functions.c",
                 "payloads/subcommands/subcommands.c",
                 "payloads/subcommands/parsing.c",
                 "payloads/decode/payload_decode.c",
                 // "payloads/encode/payload_encode.c",
+                "payloads/function_maps/f_map.c",
+                "payloads/function_maps/decode_functions.c",
+                "payloads/function_maps/encode_functions.c",
                 "payloads/base/payload_base.c",
 
                 "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
