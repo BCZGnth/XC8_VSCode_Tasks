@@ -16,7 +16,9 @@
                 "-Wa,-a=build/${fileBasenameNoExtension}/diagnostics/assembly_list_file.lst",
                 "-Wl,-Map=build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.map",
                 "-v",
-                "-mheap=2000", 
+                "-mheap=auto",
+                "-mstack=nonreentrant", 
+
                 // "-Wno-#warnings",
                 "-I", "mcc_generated_files/system/",
                 "-I", "mcc_generated_files/i2c_host/",
@@ -43,6 +45,7 @@
                 "-I", "shared_rx_tx/",
                 "-I", "aes_lib",
 
+                // "-S",
                 "-o",
                 "build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.hex",
                 "-O0",
