@@ -17,7 +17,9 @@
                 "-Wl,-Map=build/${fileBasenameNoExtension}/${fileBasenameNoExtension}.map",
                 "-v",
                 "-mheap=auto",
-                "-mstack=nonreentrant", 
+                "-mstack=nonreentrant",
+                "-mstackcall",
+                // "-msummary=xmlfull", 
 
                 // "-Wno-#warnings",
                 "-I", "mcc_generated_files/system/",
