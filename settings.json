@@ -32,9 +32,13 @@
         "aes_key.h": "c",
         "ssd1309.h": "c",
         "encode_functions.h": "c",
-        "decode_functions.h": "c",
         "stdio.h": "c",
-        "f_map.h": "c"
+        "f_map.h": "c",
+        "misc.h": "c",
+        "GLCD_ILI9488_Driver.h": "c",
+        "GLCD_ILI9488_Driver.c": "c",
+        "GLCD_ILI9488_Commands.h": "c"
+
     },
     "mplab.project.workspace.addNewSourceFiles": "Always",
     "mplab.project.workspace.removeDeletedSourceFiles": "Always",

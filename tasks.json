@@ -46,6 +46,7 @@
                 "-I", "payloads/function_maps",
                 "-I", "shared_rx_tx/",
                 "-I", "aes_lib",
+                // "-I", "ili9488_driver/",
 
                 // "-S",
                 "-o",
@@ -89,6 +90,9 @@
                 "payloads/function_maps/decode_functions.c",
                 "payloads/function_maps/encode_functions.c",
                 "payloads/base/payload_base.c",
+
+                // ILI9488 Driver
+                // "GLCD_ILI9488_Driver.c"
 
                 "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
                 "build/${fileBasenameNoExtension}_output.txt"
