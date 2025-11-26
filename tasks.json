@@ -46,7 +46,9 @@
                 "-I", "payloads/function_maps",
                 "-I", "shared_rx_tx/",
                 "-I", "aes_lib",
-                // "-I", "ili9488_driver/",
+                "-I", "ili9488_driver/",
+                "-I", "ili9488_driver/base",
+                "-I", "ili9488_driver/GFX",
 
                 // "-S",
                 "-o",
@@ -58,7 +60,7 @@
                 "mcc_generated_files/system/src/interrupt.c",
                 "mcc_generated_files/system/src/config_bits.c",
                 "mcc_generated_files/system/src/clock.c",
-                "mcc_generated_files/i2c_host/src/i2c2.c",
+                // "mcc_generated_files/i2c_host/src/i2c2.c",
                 "mcc_generated_files/uart/src/uart1.c",
                 "mcc_generated_files/peripheral/src/pmd.c",
                 
@@ -67,12 +69,12 @@
                 "shared_rx_tx/lora_setup.c",
 
                 // SSD1309 includes
-                "SSD1309_Driver/base/ssd1309_commands.c",
-                "SSD1309_Driver/base/ssd1309_i2c.c",
-                "SSD1309_Driver/GFX/ssd1309_api.c",
-                "SSD1309_Driver/GFX/ssd1309_font.c",
-                "SSD1309_Driver/GFX/ssd1309_shapes.c",
-                "SSD1309_Driver/quick_frames/h2o_frames.c",
+                // "SSD1309_Driver/base/ssd1309_commands.c",
+                // "SSD1309_Driver/base/ssd1309_i2c.c",
+                // "SSD1309_Driver/GFX/ssd1309_api.c",
+                // "SSD1309_Driver/GFX/ssd1309_font.c",
+                // "SSD1309_Driver/GFX/ssd1309_shapes.c",
+                // "SSD1309_Driver/quick_frames/h2o_frames.c",
 
                 // LORA includes
                 "SoftSPI/SoftSPI.c",
@@ -92,7 +94,7 @@
                 "payloads/base/payload_base.c",
 
                 // ILI9488 Driver
-                // "GLCD_ILI9488_Driver.c"
+                "ili9488_driver/base/ili9488_driver.c",
 
                 "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
                 "build/${fileBasenameNoExtension}_output.txt"
