@@ -37,8 +37,9 @@
         "misc.h": "c",
         "GLCD_ILI9488_Driver.h": "c",
         "GLCD_ILI9488_Driver.c": "c",
-        "GLCD_ILI9488_Commands.h": "c"
-
+        "GLCD_ILI9488_Commands.h": "c",
+        "ili9488_commands.h": "c",
+        "ili9488_driver.h": "c"
     },
     "mplab.project.workspace.addNewSourceFiles": "Always",
     "mplab.project.workspace.removeDeletedSourceFiles": "Always",
