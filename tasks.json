@@ -63,6 +63,7 @@
                 // "mcc_generated_files/i2c_host/src/i2c2.c",
                 "mcc_generated_files/uart/src/uart1.c",
                 "mcc_generated_files/peripheral/src/pmd.c",
+                "mcc_generated_files/spi/src/spi1.c",
                 
                 "logger/logger.c",
                 "shared_rx_tx/misc.c",
