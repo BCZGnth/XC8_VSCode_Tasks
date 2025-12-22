@@ -49,6 +49,7 @@
                 "-I", "ili9488_driver/",
                 "-I", "ili9488_driver/base",
                 "-I", "ili9488_driver/GFX",
+                "-I", "ili9488_driver/quick_frames",
 
                 // "-S",
                 "-o",
@@ -98,6 +99,8 @@
                 "ili9488_driver/base/ili9488_driver.c",
                 "ili9488_driver/base/ili9488_commands.c",
                 "ili9488_driver/GFX/ili9488_api.c",
+                "ili9488_driver/GFX/ili9488_shapes.c",
+                "ili9488_driver/quick_frames/h2o_frames_ili.c",
 
                 "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
                 "build/${fileBasenameNoExtension}_output.txt"
