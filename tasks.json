@@ -35,7 +35,7 @@
                 // "-I", "SSD1309_Driver/GFX",
                 // "-I", "SSD1309_Driver/quick_frames",
                 "-I", "LoRa/",
-                "-I", "SoftSPI/",
+                "-I", "SoftSPI_ili/",
                 "-I", "logger/",
                 "-I", "payloads/",
                 "-I", "payloads/decode",
@@ -79,7 +79,7 @@
                 // "SSD1309_Driver/quick_frames/h2o_frames.c",
 
                 // LORA includes
-                "SoftSPI/SoftSPI.c",
+                "SoftSPI_ili/ili_SoftSPI.c",
                 // "LoRa/lora.c",
                 // "LoRa/dummy_defines.c",
                 // "aes_lib/aes.c",
