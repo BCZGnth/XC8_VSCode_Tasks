@@ -3,6 +3,7 @@
             "xc8Includes": [
                 "C:/Program Files/Microchip/xc8/v3.10/pic/sources/c99/**",
                 "C:/Program Files/Microchip/xc8/v3.10/pic/include/c99/**",
+                "C:/Program Files/Microchip/xc8/v3.10/pic/include/*",
                 "C:/Program Files/Microchip/PIC18F-K_DFP/**"
             ]
     },
