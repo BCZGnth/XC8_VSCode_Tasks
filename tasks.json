@@ -51,6 +51,9 @@
                 "-I", "ili9488_driver/base",
                 "-I", "ili9488_driver/GFX",
                 "-I", "ili9488_driver/quick_frames",
+                "-I", "xpt2046_driver/",
+                "-I", "ili9488_driver/h2o_debug_menu/",
+
 
                 // "-S",
                 "-o",
@@ -81,29 +84,35 @@
                 // "SSD1309_Driver/quick_frames/h2o_frames.c",
 
                 // LORA includes
-                "SoftSPI_ili/ili_SoftSPI.c",
                 "SoftSPI_lora/lora_SoftSPI.c",
                 "LoRa/lora.c",
-                // "LoRa/dummy_defines.c",
+                "LoRa/dummy_defines.c",
                 "aes_lib/aes.c",
-
+                
                 // Payload decoding
                 "payloads/lora_display_interface/lora_display_interface.c",
                 // "payloads/subcommands/subcommands.c",
                 "payloads/subcommands/parsing.c",
                 "payloads/decode/payload_decode.c",
                 // "payloads/encode/payload_encode.c",
-                // "payloads/function_maps/f_map.c",
+                "payloads/function_maps/f_map.c",
                 "payloads/function_maps/decode_functions.c",
                 // "payloads/function_maps/encode_functions.c",
                 "payloads/base/payload_base.c",
-
+                
                 // ILI9488 Driver
+                "SoftSPI_ili/ili_SoftSPI.c",
                 "ili9488_driver/base/ili9488_driver.c",
                 "ili9488_driver/base/ili9488_commands.c",
                 "ili9488_driver/GFX/ili9488_api.c",
                 "ili9488_driver/GFX/ili9488_shapes.c",
                 "ili9488_driver/quick_frames/h2o_frames_ili.c",
+                "ili9488_driver/h2o_debug_menu/menu.c"
+
+                // xpt2046 Driver
+                "xpt2046_driver/xpt2046.c",
+
+
 
                 "|C:\\ProgramData\\msys64\\usr\\bin\\tee.exe",
                 "build/${fileBasenameNoExtension}_output.txt"
